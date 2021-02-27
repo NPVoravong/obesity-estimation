@@ -1,1 +1,1 @@
-web: gunicorn DataVizProject:app
+web: gunicorn obesity_project:app
