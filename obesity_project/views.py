@@ -11,62 +11,16 @@ from . import app
 @app.route('/home')
 def home():
     """Renders the home page."""
-    return render_template(
-        'index.html',
-        title='Home Page',
-        year=datetime.now().year,
-    )
+    return render_template('index.html',)
 
 
-@app.route('/contact')
+@app.route('/models')
 def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
+    """Renders the machine learning model page."""
+    return render_template('model.html')
 
 
-@app.route('/about')
+@app.route('/predictor')
 def about():
     """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
-
-
-@app.route('/details')
-def details():
-    """Renders the about page."""
-    return render_template(
-        'details.html',
-        title='Details',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
-
-
-@app.route('/plot')
-def plot():
-    """Renders the contact page."""
-    return render_template(
-        'plot.html',
-        title='Financial Report',
-        year=datetime.now().year,
-        message='Your Financial report page.'
-    )
-
-@app.route('/test')
-def test():
-    """Renders the contact page."""
-    return render_template(
-        'test.html',
-        title='How to add a page',
-        year=datetime.now().year,
-        message='Testing how to add a page'
-    )
+    return render_template('predictor.html')
