@@ -13,8 +13,10 @@ from . import app
 import os
 
 
+
+
 DATABASE_URL = os.environ.get(
-    'DATABASE_URL', '') or "your database connection string"
+    'DATABASE_URL', '') or "postgres://postgres:@aws-pg-db001.cy0jvyctgrrb.us-east-2.rds.amazonaws.com:5432/obesity"
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 db = SQLAlchemy(app)
 
