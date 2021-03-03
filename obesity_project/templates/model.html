@@ -77,13 +77,13 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a class="nav-link" href="index.html" style="font-weight: bold;">Home</a>
+              <a class="nav-link" href="{{ url_for('home') }}" style="font-weight: bold;">Home</a>
             </li>
             <li class="list-inline-item">
-              <a class="nav-link" href="model.html" style="font-weight: bold;">Models</a>
+              <a class="nav-link" href="{{ url_for('model') }}" style="font-weight: bold;">Models</a>
             </li>
             <li class="list-inline-item">
-              <a class="nav-link" href="predictor.html"style="font-weight: bold;">Predictor</a>
+              <a class="nav-link" href="{{ url_for('predictor') }}" style="font-weight: bold;">Predictor</a>
             </li>
           </ul>
           <p class="copyright text-muted">ML: Obesity Classifier 2021</p>
