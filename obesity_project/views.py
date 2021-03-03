@@ -15,12 +15,12 @@ def home():
 
 
 @app.route('/model')
-def contact():
+def model():
     """Renders the machine learning model page."""
     return render_template('model.html')
 
 
 @app.route('/predictor')
-def about():
+def predict():
     """Renders the prediction page."""
     return render_template('predictor.html')
