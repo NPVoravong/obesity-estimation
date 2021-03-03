@@ -14,7 +14,7 @@ def home():
     return render_template('index.html',)
 
 
-@app.route('/models')
+@app.route('/model')
 def contact():
     """Renders the machine learning model page."""
     return render_template('model.html')
@@ -22,5 +22,5 @@ def contact():
 
 @app.route('/predictor')
 def about():
-    """Renders the about page."""
+    """Renders the prediction page."""
     return render_template('predictor.html')
