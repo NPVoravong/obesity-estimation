@@ -75,24 +75,37 @@
 				<div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/KNN/knn_selection.PNG" class="img-wrap"><img src="../static/content/img/KNN/k-selection-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<h3>Mother's Love</h3>
-							<p>Every time you drink a glass of milk or eat a piece of cheese, you harm a mother. Please go vegan. <em>&mdash; Gary L. Francione</em></p>
+							<p>
+							When using KNN there are two general practices to keep in mind. Since the value of K is non-parametric the formula k = sqrt(N)/2 where n is the number of samples in the training dataset. To prevent ties if you have an even number of classes it’s a good idea to use an odd K value but, if the number of classes are odd then an even K value is recommended. 
+							</p>
+							<p>
+							K = sqrt(0.75*2111)/2
+							<br>
+							K = 19.89504
+							<br>
+							<br>
+							With 16 classes the number should be odd. The k value from the previous formula is 19.
+							</p>
+							<p>
+							Lower k values tend to be more accurate but also have a tendency to overfit. Higher k values have a lower testing accuracy score. Finding the balance between the two is very important for KNN.
+							</p>
 						</div>
 					</a>
 				</div>
-				<div class="grid__item" data-size="1280x1280">
+				<!-- <div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/KNN/knn_confusion_matrix.PNG" class="img-wrap"><img src="../static/content/img/KNN/knn-confusion-tile.png" alt="img07" />
 						<div class="description description--grid">
 							<h3>Silent Killer</h3>
 							<p>Cows’ milk protein may be the single most significant chemical carcinogen to which humans are exposed. <em>&mdash; T. Colin Campbell</em></p>
 						</div>
 					</a>
-				</div>
+				</div> -->
 				<div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/KNN/knn_classification_report.PNG" class="img-wrap"><img src="../static/content/img/KNN/knn-classification-tile.png" alt="img07" />
 						<div class="description description--grid">
-							<h3>Silent Killer</h3>
-							<p>Cows’ milk protein may be the single most significant chemical carcinogen to which humans are exposed. <em>&mdash; T. Colin Campbell</em></p>
+							<p>
+								While the accuracy numbers are decent. There appears to be too many classes for KNN to be the ideal model for this problem.
+							</p>
 						</div>
 					</a>
 				</div>
@@ -104,51 +117,86 @@
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
-					<a href="../static/content/img/Logistic/logistic_classification_report.PNG" class="img-wrap"><img src="../static/content/img/Logistic/lr-classification-tile.png" alt="img06" />
+					<a href="../static/content/img/Logistic/test-classification.jpg" class="img-wrap"><img src="../static/content/img/Logistic/lr-classification-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<p>Logistic regression is a classification algorithm. It is used to predict a binary outcome based on a set of independent variables.<em>&mdash; https://careerfoundry.com/en/blog/data-analytics/what-is-logistic-regression/</em></p>	
+							<p>
+								When fitting a logistic regression model to our data, we got a training score of 0.96 and a test score of 0.94.
+								These scores are both high, so there was no need to worry about over or under-fitting - raising our confidence that 
+								our accuracy of 0.92 is a good indicator of this model's performance.
+							</p>
+							<p>Looking at the classification report - overall, the logistic model performs quite well. 
+								Do note that recall for class 1 (normal weight) seems to be lower than the rest; this is a trait
+								that seems to be shared across all our classification models. This indicates that our models are better at 
+								predicting the other weight classes as opposed to normal weight. Perhaps the data set is imbalanced in that regard.
+							</p>
+							<p>
+								The weighted average precision, recall, and f1-score are all quite high at 0.92 - showing that this model is quite
+								reliable at predicting the level of obesity using the given data.
+							</p>
 						</div>
 					</a>
 				</div>
-				<div class="grid__item" data-size="1280x1280">
+				<!-- <div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/Logistic/logistic_cofusion_matrix.PNG" class="img-wrap"><img src="../static/content/img/Logistic/lr-cm-tile.png" alt="img06" />
 						<div class="description description--grid">
 							<p>Nothing to see here</p>
+						</div>
+					</a>
+				</div> -->
+				<div class="grid__item" data-size="1280x1280">
+					<a href="../static/content/img/residuals.jpg" class="img-wrap"><img src="../static/content/img/residuals-tile.png" alt="img06" />
+						<div class="description description--grid">
+							<p>	We attempted to fit two models since we were of differing opinions of whether or not all the features would be impactful.
+								We used two linear models in our approach: Ridge and Lasso models, where Ridge is more suited to data where there are many
+								impactful features and Lasso is more suited to data where few features should be impactful.</p>
+							<p>
+								Looking at residual plots as well as the mean squared error and r2 values for our two models shows that neither of them are 
+								great fits. We arrive at the conclusion that perhaps our data is not suited for regression, and (maybe) more numerical data
+								involving health (like blood pressure) would be needed.
+							</p>
 						</div>
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/svm_rbf/svm-tile.png" class="img-wrap"><img src="../static/content/img/svm_rbf/svm-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<p>A support vector machine (SVM) is machine learning algorithm that analyzes data for classification and regression analysis. SVM is a supervised learning method that looks at data and sorts it into one of two categories. An SVM outputs a map of the sorted data with the margins between the two as far apart as possible.<em>&mdash; https://www.techopedia.com/definition/30364/support-vector-machine-svm</em></p>	
+							<p>
+							  SVM (Support Vector Machine) is one of the most popular supervised machine learning models. The SVM model can solve linear classification, nonlinear classification, and even regression problems. After analyzing our dataset we thought this would be a great model to test. We ran our data through the ‘linear’ kernel, ‘rbf’ kernel, and ‘rbf’ with hyperparameter tuning of C & Gamma. 
+							</p>	
 						</div>
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/svm_rbf/svm_rbf_summary_png.png" class="img-wrap"><img src="../static/content/img/svm_rbf/svm-summary-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<p>A support vector machine (SVM) is machine learning algorithm that analyzes data for classification and regression analysis. SVM is a supervised learning method that looks at data and sorts it into one of two categories. An SVM outputs a map of the sorted data with the margins between the two as far apart as possible.<em>&mdash; https://www.techopedia.com/definition/30364/support-vector-machine-svm</em></p>	
+							<p>The RBF model with no hyperparameters tuning was a pretty good model. The Accuracy was 87.69% and the F1 Score was 87.70%. These results were okay but we wanted to see if adjusting the hyperparameters would increase these percentages. </p>
 						</div>
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/svm_rbf/svm_rbf_gamma_C_optimization_png.png" class="img-wrap"><img src="../static/content/img/svm_rbf/svm-gamma-c-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<p>A support vector machine (SVM) is machine learning algorithm that analyzes data for classification and regression analysis. SVM is a supervised learning method that looks at data and sorts it into one of two categories. An SVM outputs a map of the sorted data with the margins between the two as far apart as possible.<em>&mdash; https://www.techopedia.com/definition/30364/support-vector-machine-svm</em></p>	
+							<p>Using the GridSearch CV function we plotted test and training accuracy for different combinations of Gamma & C. 
+								<br>
+								<br>
+								Optimal Hyperparameters: Gamma = 0.001; C=1000
+								</p>
 						</div>
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
 					<a href="../static/content/img/svm_rbf/svm_optimized_rbf_summary_png.png" class="img-wrap"><img src="../static/content/img/svm_rbf/svm-optimized-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<p>A support vector machine (SVM) is machine learning algorithm that analyzes data for classification and regression analysis. SVM is a supervised learning method that looks at data and sorts it into one of two categories. An SVM outputs a map of the sorted data with the margins between the two as far apart as possible.<em>&mdash; https://www.techopedia.com/definition/30364/support-vector-machine-svm</em></p>	
+							<p>After adjusting the hyperparameters our model improved. The Accuracy increased to 95.64% and the F1 Score increased to 95.63%. </p>
 						</div>
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
-					<a href="../static/content/img/model-comparison-tile.png" class="img-wrap"><img src="../static/content/img/model-comparison-tile.png" alt="img06" />
+					<a href="../static/content/img/model_comparison.jpg" class="img-wrap"><img src="../static/content/img/model-comparison-tile.png" alt="img06" />
 						<div class="description description--grid">
-							<p>A support vector machine (SVM) is machine learning algorithm that analyzes data for classification and regression analysis. SVM is a supervised learning method that looks at data and sorts it into one of two categories. An SVM outputs a map of the sorted data with the margins between the two as far apart as possible.<em>&mdash; https://www.techopedia.com/definition/30364/support-vector-machine-svm</em></p>	
+							<p>
+								We compared all the classification reports from KNN, Logistic, & RBF models. Our conclusion is that the RBF model is the most accurate for our dataset. RBF has the highest accuracy out of the three models (96%). Accuracy is a great metric to go off of but we still wanted to take a look at the recall % for each obesity level. As you can see all three of the ML models had the hardest time predicting the correct obesity level for 1 (normal weight). RBF had the best recall ratio (88%), this allowed us to confirm this is the best model to use. 
+							</p>
 						</div>
 					</a>
 				</div>

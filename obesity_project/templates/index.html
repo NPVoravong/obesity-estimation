@@ -57,7 +57,7 @@
               </li>
               <li class="mr-3">
                 <a class="nav-link inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" 
-                href="{{ url_for('predictor') }}" style="color: orangered; font-weight: bold;">predictor</a>
+                href="{{ url_for('predictor') }}" style="color: orangered; font-weight: bold;">Predictor</a>
               </li>
           </ul>
         </div>
@@ -74,7 +74,7 @@
           </h1>
           <p class="uppercase tracking-loose w-full">Project Summary</p>
           <p class="leading-normal text-2xl mb-8">
-            Sub-hero message, not too long and not too short. Make it just right!
+            Using data provided by the UCI Machine Learning Repository a classification model was created to predict where a user falls on the obesity range. The range has four levels: Underweight, Healthy Weight, Overweight, Obese. 
           </p>
           <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             <a href="https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+" target="_blank" rel="noopener noreferrer">Data Source</a>
@@ -125,15 +125,31 @@
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6"></div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h5 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Predictors
+            </h5>
+            <p class="text-gray-600 mb-6">
+              FHWO (Family History with Overweight)<br />
+              FAVC (Frequent Consumption of High Caloric Food)<br />
+              FCVC (Frequency of Consumption of Vegetables)<br />
+              NCP (Number of main meals)<br />
+              CAEC (Consumption of Food Between Meals)<br />
+              SMOKE (Smoking/Non-Smoking)<br />
+              CH2O (Consumption of Water Daily)<br />
+              SCC (Calories Consumption Monitoring)<br />
+              FAF (Physical Activity Frequency)<br />
+              TUE (Time Using Technology Devices)<br />
+              CALC (Consumption of Alcohol)<br />
+              MTRANS (Transportation Used)<br />
+            </p>
+            <h5 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Outcomes
+            </h5>
+            <p class="text-gray-600">
+              BMI (Body Mass Index)<br />
+              Weight (Obesity Classification)<br />
+            </p>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
           </div>
@@ -141,25 +157,6 @@
           <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow text-gray-900">
               <img src="../static/content/img/corr_matrix_lrg2.png" alt="">
-            <h2 class="font-bold">Correlation Matrix Legend</h2>
-            <p>
-              <span class="text-underline text-center font-bold">Predictors:</span><br />
-              FHWO (Family History with Overweight)<br />
-              FAVC (Frequent consumption of high caloric food)<br />
-              FCVC (Frequency of consumption of vegetables)<br />
-              NCP (Number of main meals)<br />
-              CAEC (Consumption of food between meals)<br />
-              SMOKE (Smoking/Non-Smoking)<br />
-              CH2O (Consumption of water daily)<br />
-              SCC (Calories consumption monitoring)<br />
-              FAF (Physical activity frequency)<br />
-              TUE (Time using technology devices)<br />
-              CALC (Consumption of alcohol)<br />
-              MTRANS (Transportation used)<br />
-              <span class="text-underline text-center font-bold">Outcomes:</span><br />
-              BMI (Body Mass Index)<br />
-              WeightLevel (Obesity Level)<br />
-            </p>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
             <div class="flex items-center justify-center">
