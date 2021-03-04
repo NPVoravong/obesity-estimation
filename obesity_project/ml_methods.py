@@ -6,12 +6,12 @@ import pickle
 
 def RunPrediction(form_inputs):
     prediction_sample = np.array(form_inputs).reshape(1,-1)
-    error_flag, predicted_result =  predictDiabetes(prediction_sample)
+    error_flag, predicted_result =  predictObesity(prediction_sample)
 
     return predicted_result 
 
 
-def predictDiabetes(prediction_sample) -> []: 
+def predictObesity(prediction_sample) -> []: 
 
     ### Initialize:
     # Intialize error = No
