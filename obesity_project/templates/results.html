@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Predictor</title>
+  <title>Results</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../static/content/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Predictor</h1>
+            <h1>Results</h1>
             <span class="subheading"></span>
           </div>
         </div>
@@ -65,132 +65,9 @@
   </header>
 
   <!-- Main Content -->
-  <form role="form" action="/results" method="POST">
-    <div id = "inner" >
-        <div class="form-group">
-            <select name="Gender" class="c-form-combo form-control" id="c-form-Gender"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Gender</option>
-                <option value="0">Female</option>
-                <option value="1">Male</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <input type="number" name="Age" placeholder="Age" id="typeNumber" class="c-form-email form-control" id="c-form-Age"
-            style="font-size: 16pt; background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-        </div>
-        <div class="form-group">
-            <select name="FamilyHistory" class="form-control" id="c-form-FamilyHistory"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Has a family member suffered or suffers from being overweight?</option>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="FAVC" class="form-control" id="c-form-FAVC"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Do you eat high caloric food frequently?</option>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="FCVC" class="c-form-combo form-control" id="c-form-FCVC"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Do you usually eat vegetables in your meals?</option>
-                <option value="0">Never</option>
-                <option value="1">Sometimes</option>
-                <option value="2">Always</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="NCP" class="c-form-combo form-control" id="c-form-NCP"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>How many main meals do you have daily?</option>
-                <option value="0">Between 1 & 2</option>
-                <option value="1">Three</option>
-                <option value="2">More than three</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="CAEC" class="c-form-combo form-control" id="c-form-CAEC"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Do you eat any food between meals?</option>
-                <option value="0">No</option>
-                <option value="1">Sometimes</option>
-                <option value="2">Frequently</option>
-                <option value="3">Always</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="SMOKE" class="c-form-combo form-control" id="c-form-SMOKE"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Do you smoke?</option>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-            </select>
-        </div>
-        <div class="form-group">
-          <select name="CH2O" class="c-form-combo form-control" id="c-form-CH2O"
-          style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-              <option selected disabled>How much water do you consume a day?</option>
-              <option value="0">Less than a Liter</option>
-              <option value="1">Between 1L and 2L</option>
-              <option value="2">More than 2L</option>
-          </select>
-      </div>
-      <div class="form-group">
-        <select name="SCC" class="c-form-combo form-control" id="c-form-SCC"
-        style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-            <option selected disabled>Do you monitor the calories you eat daily?</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-    </select>
-    </div>
-  <div class="form-group">
-            <select name="FAF" class="c-form-combo form-control" id="c-form-FAF"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>How often do you have physical activity?</option>
-                <option value="0">Never</option>
-                <option value="1">1 or 2 Days</option>
-                <option value="2">2 or 4 Days</option>
-                <option value="3">4 or 5 days</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="TUE" class="c-form-combo form-control" id="c-form-TUE"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Amount of time spent on devices (hrs)?</option>
-                <option value="0">0-2</option>
-                <option value="1">3-5</option>
-                <option value="2">More than 5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="CALC" class="c-form-combo form-control" id="c-form-CALC"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>How often do you drink alcohol?</option>
-                <option value="0">I do not drink</option>
-                <option value="1">Sometimes</option>
-                <option value="2">Frequently</option>
-                <option value="3">Always</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select name="MTRANS" class="c-form-combo form-control" id="c-form-MTRANS"
-            style="background-color: #d6ddd2; font-size: 16pt; font-family: 'Roboto', sans-serif; font-weight: bold;">
-                <option selected disabled>Primary method of transportation?</option>
-                <option value="0">Automobile</option>
-                <option value="1">Motorbike</option>
-                <option value="2">Bicycle</option>
-                <option value="3">Public Transportation</option>
-                <option value="4">Walking</option>
-            </select>
-        </div>
-        <button type="submit" action="" class="btn btn-primary btn-lg btn-block">Submit</button>
-    </div>
-</form>
+  <div>
+    <h1>{{prediction}}</h1>
+  </div>
   
   <!-- Footer -->
   <footer>
