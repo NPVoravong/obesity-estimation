@@ -1,0 +1,11 @@
+In addition to our classification of the obesity level, we also attempted to use the data to predict weight.
+
+This regression problem ultimately was not the most successful.
+
+We attempted to fit two models since we were of differing opinions of whether or not all the features would be impactful.
+We used two linear models in our approach: Ridge and Lasso models, where Ridge is more suited to data where there are many
+impactful features and Lasso is more suited to data where few features should be impactful.
+
+Looking at residual plots as well as the mean squared error and r2 values for our two models shows that neither of them are 
+great fits. We arrive at the conclusion that perhaps our data is not suited for regression, and (maybe) more numerical data
+involving health (like blood pressure) would be needed.
