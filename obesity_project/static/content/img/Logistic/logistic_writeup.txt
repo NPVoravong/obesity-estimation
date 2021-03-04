@@ -1,12 +1,12 @@
 When fitting a logistic regression model to our data, we got a training score of 0.96 and a test score of 0.94.
 These scores are both high, so there was no need to worry about over or under-fitting - raising our confidence that 
-our accuracy of 0.94 is a good indicator of this model's performance.
+our accuracy of 0.92 is a good indicator of this model's performance.
 
 Looking at the classification report - overall, the logistic model performs quite well. 
 Do note that recall for class 1 (normal weight) seems to be lower than the rest; this is a trait
 that seems to be shared across all our classification models. This indicates that our models are better at 
 predicting the other weight classes as opposed to normal weight. Perhaps the data set is imbalanced in that regard.
 
-The weighted average precision, recall, and f1-score are all quite high at 0.94 - showing that this model is quite
+The weighted average precision, recall, and f1-score are all quite high at 0.92 - showing that this model is quite
 reliable at predicting the level of obesity using the given data.
 

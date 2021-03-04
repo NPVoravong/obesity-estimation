@@ -20,7 +20,7 @@ def model():
     return render_template('model.html')
 
 
-@app.route('/predictor')
-def predictor():
+@app.route('/input')
+def input():
     """Renders the prediction page."""
-    return render_template('predictor.html')
+    return render_template('input.html')
